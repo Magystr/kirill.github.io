@@ -1,0 +1,12 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class "Мойщик" as P {
+ Чистящая химия
+Сделать химчистку (Грязный автомобиль, До конца дня) -> Автомобиль с чистым салоном
+}
+hide circle
+@enduml
