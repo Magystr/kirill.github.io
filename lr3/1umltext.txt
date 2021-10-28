@@ -1,0 +1,13 @@
+@startuml
+actor "Мастер" as owner
+boundary "Система управления сервисом" as app
+entity "База данных" as data
+actor "Клиент" as trainee
+owner-> app : Запрос выполнения задач
+app-> data : Запрос выполнения задач
+data-> app : Ответ
+app-> owner: Ответ
+owner-> trainee: Утверждение выдачи 
+trainee-> app: Отзыв
+app-> data : Запись отзыва
+@enduml
